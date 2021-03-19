@@ -1,0 +1,103 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/template/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+body {
+  padding-top: 56px;
+  background-color: #c8d6e5;
+}
+.row {
+  margin-top: 5em;
+}
+#logo {
+  border-top: 0px;
+  padding-top: 0px;
+  height: 125%;
+}
+.logo {
+  height: 2.5em;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 150%;
+  align-items: center;
+  align-content: center; 
+}
+.textBig {
+  font-size: 150%;
+}
+.text {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: center;
+  width: 10em;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.card {
+  background-color: rgb(251, 252, 252);
+}
+.social ul {
+  position: relative;
+  padding-left: 0px;
+  display: flex;
+  z-index: 2;
+  list-style: none;
+}
+.social ul li {
+  position: relative;
+  margin: 10px;
+}
+.social ul li a {
+  position: relative;
+  width: 1.8em;
+  height: 50px;
+  display: inline-block;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #0e0d0d; 
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  transition: 0.4s;
+  overflow: hidden;
+}
+.social ul li a:hover {
+  transform: translateY(-10px);
+}
+.social ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(197, 197, 197, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.6s;
+}
+.social ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
