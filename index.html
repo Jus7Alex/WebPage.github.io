@@ -173,18 +173,18 @@
   <div id="Contact" class="col-md-12 mb-5">
     <h2>Contact</h2>
     <hr>
-    <form class="row g-3">
+    <form action="contact.php" s="row g-3" method="POST">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Adresa dumneavoastră de e-mail:</label>
-        <input type="email" class="form-control" id="inputEmail4">
+        <input name="email" type="email" class="form-control" id="inputEmail4">
       </div>
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label">Număr de telefon:</label>
-        <input type="password" class="form-control" id="inputPassword4">
+        <input name="name" type="text" class="form-control" id="inputPassword4">
       </div>
-        <div class="col-md-12">
+      <div class="col-md-12">
       <label for="exampleFormControlTextarea1" class="form-label">Mesajul dumneavoastră:</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       <hr>
       <div class="col-12">
         <button class="btn btn-primary" type="submit">Trimite!</button>
