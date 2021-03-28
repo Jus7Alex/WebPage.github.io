@@ -171,7 +171,7 @@ body {
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  bottom: -2500px;
+  bottom: auto;
 }
 @keyframes bubble {
   0% {
