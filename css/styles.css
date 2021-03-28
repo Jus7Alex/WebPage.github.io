@@ -1,14 +1,8 @@
-/*!
- * Start Bootstrap - Business Frontpage (https://startbootstrap.com/template/business-frontpage)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
- */
-
- @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 
 body {
   padding-top: 56px;
-  background-color: #48dbfb;
+  background-color: #83def3;
 }
 .row {
   margin-top: 5em;
@@ -100,4 +94,116 @@ body {
 }
 .social ul li a:hover::before {
   transform: skewX(45deg) translateX(-150px);
+}
+.contact {
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 0 10px 30px 0px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+.contact .title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 3em;
+  line-height: 50px;
+  padding-bottom: 10px;
+  color: #2d2c33;
+  background: linear-gradient(to right, #524141 0%, #e2f105 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+.contact-form .input-text {
+  display: block;
+  background-color: #83def3;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #b9c50e;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + label {
+  transform: translateY(-15px);
+}
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #b9c50e;
+  cursor: text;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+.contact-form .submit-btn {
+  display: inline-block;
+  background-image: linear-gradient(to right, #524141 0%, #e2f105 100%);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+  align-content: center;
+}
+.bubbles img {
+  width: 50px;
+  animation: bubble 10s linear infinite;
+}
+.bubbles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -2500px;
+}
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
+.bubbles img:nth-child(1) {
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(2) {
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+  animation-delay: 4s;
 }
