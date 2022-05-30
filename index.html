@@ -18,19 +18,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
-  
-<script>
-function loadDoc() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("button").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "demo_get.asp");
-  xhttp.send();
-}
-</script>
-  
-  
+ 
 <body>
 
   <!-- Navigation -->
@@ -182,11 +170,13 @@ function loadDoc() {
   </div>
   <!-- /.container -->
   <section id="Contact" class="contact">
+    <p>Start typing a name in the input field below:</p>
+    <p>Suggestions: <span id="txtHint"></span></p>
     <h2 class="title">Contact</h2>
     <div class="container">
         <div class="contact-form row">
             <div class="form-field col-lg-6">
-                <input id="name" class="input-text" type="text" name="">
+                <input id="name" class="input-text" type="text" name="" onkeyup="showHint(this.value)>
                 <label for="name" class="label">name</label>
             </div>              
             <div class="form-field col-lg-6">
@@ -242,11 +232,26 @@ function loadDoc() {
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; DbN sadasdasd2021</p>
+      <p class="m-0 text-center text-white">Copyright &copy; DbN 2021</p>
     </div>
-    <button type="button" onclick="loadDoc()">Click Me!</button>
   </footer>
 
+  <script>
+  function showHint(str) {
+    if (str.length == 0) {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    } else {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    xmlhttp.open("GET", "gethint.php?q=" + str);
+    xmlhttp.send();
+   }
+  }
+  </script>
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
